@@ -17,9 +17,6 @@ while True:
         print("Please enter 'D' for Development and 'P' for Production.")
 
 
-
-
-
 # with open('token.csv') as file1:
 #     reader = csv.DictReader(file1)
 #     for row in reader:
@@ -44,10 +41,8 @@ while True:
 access_token = login_requests.jwt_token['token']
 
 # create_one_user
-# new = {"name": "hassan", "phone_number": 1234567892, "address": "Urmia67", "email": "klav@gmail.com", "password": "password1"}
-# print(requests.post(f'{hostname}users', json=new,
-#                     headers={'Authorization': f"Bearer {access_token}"}).json())
-# print(requests.post(f'{hostname}users', json=product).json())
+# new = {"name": "hassan", "phone_number": 1234567892, "address": "urmia1", "email": "klav@gmail.com", "password": "password1"}
+# print(requests.post(f'{hostname}users', json=new).json())
 
 # get_all_users
 # remember that query parameters come after ? mark in the URL like below. also we can use as many queriesas we want, we have to just put
@@ -60,15 +55,15 @@ access_token = login_requests.jwt_token['token']
 
 # get_one_user
 # print(requests.get(f'{hostname}users/2?search=new%20title&limit=5&skip=3').json())
-print(requests.get(f'{hostname}users/1', headers={'Authorization': f"Bearer {access_token}"}).json())
+# print(requests.get(f'{hostname}users/8', headers={'Authorization': f"Bearer {access_token}"}).json())
 
 # update_one_user
-# product = {'name': 'cake', 'category': 'food', 'original_price': '1', 'discount': '0.3'}
-# print(requests.put(f'{hostname}users/14', json=product,
+# user = {"name": "hassan", "phone_number": 1234567895, "address": "Urmia77", "email": "klav@gmail.com", "password": "password1"}
+# print(requests.put(f'{hostname}users/6', json=user,
 #                    headers={'Authorization': f"Bearer {access_token}"}).json())
 
 # delete_one_user
-# print(requests.delete(f'{hostname}users/12', headers={'Authorization': f"Bearer {access_token}"}).status_code)
+# print(requests.delete(f'{hostname}users/8', headers={'Authorization': f"Bearer {access_token}"}).status_code)
 
 # Voting on a product
 # vote = requests.post(f'{hostname}votes', json={'product_id': 13, 'dir': 1}, headers={'Authorization': f"Bearer {access_token}"})

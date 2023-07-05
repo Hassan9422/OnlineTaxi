@@ -53,6 +53,7 @@ class UserInfo(BaseModel):
 
 
 class ResponsePassenger(BaseModel):
+    passenger_id: int
     source: str
     destination: str
     user_info: UserInfo

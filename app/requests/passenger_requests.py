@@ -44,12 +44,12 @@ while True:
 access_token = login_requests.jwt_token['token']
 
 # create_one_passenger
-passenger = {'source': 'a', 'destination': 'b'}
-print(requests.post(f'{hostname}passengers', json=passenger,
-                    headers={'Authorization': f"Bearer {access_token}"}).json())
+# passenger = {'source': 'r', 'destination': 'k'}
+# print(requests.post(f'{hostname}passengers', json=passenger,
+#                     headers={'Authorization': f"Bearer {access_token}"}).json())
 # print(requests.post(f'{hostname}passengers', json=product).json())
 
-# get_all_products
+# get_all_passengers
 # remember that query parameters come after ? mark in the URL like below. also we can use as many queries as we want, we have to just put
 # "&" to separate them. also if we wanna type space, we have to type "%20" in the URL, like below:
 
@@ -60,16 +60,17 @@ print(requests.post(f'{hostname}passengers', json=passenger,
 # for x in requests.get(f'{hostname}passengers').json():
 #     print(x)
 
-# get_one_product print(requests.get(f'{hostname}passengers/2?search=new%20title&limit=5&skip=3', headers={'Authorization': f"Bearer {
-# access_token}"}).json()) print(requests.get(f'{hostname}passengers/1').json())
+# get_one_passenger
+# print(requests.get(f'{hostname}passengers/12?search=new%20title&limit=5&skip=3', headers={'Authorization': f"Bearer {access_token}"}).json())
+# print(requests.get(f'{hostname}passengers/1').json())
 
 # update_one_passenger
-# product = {'name': 'cake', 'category': 'food', 'original_price': '1', 'discount': '0.3'}
-# print(requests.put(f'{hostname}passengers/14', json=product,
+# passenger = {'source': 'e', 'destination': 'j'}
+# print(requests.put(f'{hostname}passengers/11', json=passenger,
 #                    headers={'Authorization': f"Bearer {access_token}"}).json())
 
 # delete_one_passenger
-# print(requests.delete(f'{hostname}passengers/12', headers={'Authorization': f"Bearer {access_token}"}).status_code)
+# print(requests.delete(f'{hostname}passengers/11', headers={'Authorization': f"Bearer {access_token}"}).status_code)
 
 # Voting on a product
 # vote = requests.post(f'{hostname}votes', json={'product_id': 13, 'dir': 1}, headers={'Authorization': f"Bearer {access_token}"})

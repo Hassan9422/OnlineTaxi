@@ -6,7 +6,7 @@ router = APIRouter(prefix="/login", tags=["Login User"])
 
 
 @router.post("/")
-def login_suer(user: schemas.UserLogin, db: session = Depends(database.get_db)):
+def login_user(user: schemas.UserLogin, db: session = Depends(database.get_db)):
 
     found_user = db.query(models.User).filter(models.User.phone_number == user.phone_number).first()
 
